@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+
+<body class="this-is-bubbling">
+
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+  <button>Click me!</button>
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    div {
+      width: 100%;
+      padding: 100px;
+    }
+
+    .one {
+      background: thistle;
+    }
+
+    .two {
+      background: mistyrose;
+    }
+
+    .three {
+      background: coral;
+    }
+    button{
+      width:100px;
+      height: 50px;
+      background-color: #31124f;
+      color: beige;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 29px 31px 71px 7px rgba(0,0,0,0.4);
+    }
+  </style>
+
+  
+  <script>
+    const divs = document.querySelectorAll('div');
+    const button = document.querySelector('button');
+
+    function logText(e) {
+      console.log(this.classList.value);
+      //console.log(this);
+
+      e.stopPropagation(); //stops bubbling
+
+    }
+
+    //document.body.addEventListener('click',logText);
+
+    // Capture is from top to bottom, Bubbling is from bottom to top
+
+    divs.forEach(div => div.addEventListener('click', logText, {
+      // capture:true // turns bubbling to capture by default  capture is false
+      //capture:true  with e.stopPropagation(); will give us only "one" es result.
+      once: true //function is fired only once
+
+    }));
+
+    button.addEventListener('click',()=>{
+      console.log('Click!!!!');
+    },{
+      once:true //you may click only once
+    });
+  </script>
+</body>
+
+</html>
