@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Follow Along Nav</title>
 </head>
+
 <body>
   <h2>Wellcome!</h2>
   <nav class="top">
@@ -16,8 +18,9 @@
         <a href="#">About Me</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://logo.clearbit.com/wesbos.com">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+            <img src="https://picsum.photos/200/200">
+            <p>Blq blq sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't
+              part of web development. It should be though!</p>
           </div>
         </div>
       </li>
@@ -74,157 +77,227 @@
     </ul>
   </nav>
 
-<style>
-  html {
-    box-sizing: border-box;
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(253,97,44,1) 100%);
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(54deg, rgba(170, 113, 255, 1) 0%, rgba(253, 97, 44, 1) 100%);
       /*linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
       linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
       linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
       linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);*/
-  }
+    }
 
-  h2 {
-    margin-top: 0;
-    padding-top: .8em;
-    color: #FEE9F8;
-    padding-left: 50px;
-    font-size: 2.5em;
-  }
+    h2 {
+      margin-top: 0;
+      padding-top: .8em;
+      color: #FEE9F8;
+      padding-left: 50px;
+      font-size: 2.5em;
+    }
 
-  nav {
-    position: relative;
-    perspective: 600px;
-  }
+    nav {
+      position: relative;
+      perspective: 600px;
+    }
 
-  .cool > li > a {
-    color: #FEE9F8;
-    text-decoration: none;
-    font-size: 20px;
-    background: rgba(140, 62, 255, 0.5);
-    box-shadow: 1px 1px 25px 7px #B6B1FA;;
-    padding: 10px 20px;
-    display: inline-block;
-    margin: 20px;
-    border-radius: 5px;
-  }
+    .cool>li>a {
+      color: #FEE9F8;
+      text-decoration: none;
+      font-size: 20px;
+      background: rgba(140, 62, 255, 0.5);
+      box-shadow: 1px 1px 25px 7px #B6B1FA;
+      ;
+      padding: 10px 20px;
+      display: inline-block;
+      margin: 20px;
+      border-radius: 5px;
+    }
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-  .cool > li {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
+    .cool>li {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
 
-  .dropdown {
-    opacity: 0;
-    position: absolute;
-    overflow: hidden;
-    padding: 20px;
-    top: -20px;
-    border-radius: 2px;
-    transition: all 0.5s;
-    transform: translateY(100px);
-    will-change: opacity;
-    display: none;
-  }
+    .dropdown {
+      opacity: 0;
+      position: absolute;
+      overflow: hidden;
+      padding: 20px;
+      top: -20px;
+      border-radius: 2px;
+      transition: all 0.5s;
+      transform: translateY(100px);
+      will-change: opacity;
+      display: none;
+    }
 
-  .trigger-enter .dropdown {
-    display: block;
-  }
+    .trigger-enter .dropdown {
+      display: block;
+    }
 
-  .trigger-enter-active .dropdown {
-    opacity: 1;
-  }
-  
-  .dropdownBackground {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background: rgb(238, 234, 234);
-    border-radius: 4px;
-    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
-    transition: all 0.3s, opacity 0.1s, transform 0.2s;
-    transform-origin: 50% 0;
-    display: flex;
-    justify-content: center;
-    opacity:0;
-  }
+    .trigger-enter-active {
+      opacity: 1;
+    }
 
-  .dropdownBackground.open {
-    opacity: 1;
-  }
+    .trigger-enter .dropdown {
+      /* in react is the same- should apply 2 separate classes, for mouse enter and leave and after that- change css*/
+      display: block;
+    }
 
-  .arrow {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    display: block;
-    background: rgb(238, 234, 234);
-    transform: translateY(-50%) rotate(45deg);
-  }
+    .trigger-enter-active .dropdown {
+      opacity: 1;
+    }
 
-  .bio {
-    min-width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.7;
-  }
+    .dropdownBackground {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background: rgb(238, 234, 234);
+      border-radius: 4px;
+      box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
+      transition: all 0.3s, opacity 0.1s, transform 0.2s;
+      transform-origin: 50% 0;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    }
 
-  .bio img {
-    float: left;
-    margin-right: 20px;
-  }
+    .dropdownBackground.open {
+      opacity: 1;
+    }
 
-  .courses {
-    min-width: 300px;
-  }
+    .arrow {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      display: block;
+      background: rgb(238, 234, 234);
+      transform: translateY(-50%) rotate(45deg);
+    }
 
-  .courses li {
-    padding: 10px 0;
-    display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-  }
+    .bio {
+      min-width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.7;
+    }
 
-  .dropdown a {
-    text-decoration: none;
-    color: #ffc600;
-  }
+    .bio img {
+      float: left;
+      margin-right: 20px;
+    }
 
-  a.button {
-    background: black;
-    display: block;
-    padding: 10px;
-    color: rgb(238, 234, 234);
-    margin-bottom: 10px;
-  }
+    .courses {
+      min-width: 300px;
+    }
 
-  /* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
-  .button[href*=twitter] { background: #019FE9; }
-  .button[href*=facebook] { background: #3B5998; }
-  .button[href*=courses] { background: #ffc600; }
-</style>
+    .courses li {
+      padding: 10px 0;
+      display: block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
 
-<script>
-</script>
+    .dropdown a {
+      text-decoration: none;
+      color: #ffc600;
+    }
+
+    a.button {
+      background: black;
+      display: block;
+      padding: 10px;
+      color: rgb(238, 234, 234);
+      margin-bottom: 10px;
+    }
+
+    /* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
+    .button[href*=twitter] {
+      background: #019FE9;
+    }
+
+    .button[href*=facebook] {
+      background: #3B5998;
+    }
+
+    .button[href*=courses] {
+      background: #ffc600;
+    }
+  </style>
+
+  <script>
+    const triggers = document.querySelectorAll(".cool>li");
+    const background = document.querySelector('.dropdownBackground');
+    const nav = document.querySelector('.top');
+
+    function handleEnter() {
+      //console.log("enter????????");
+
+      this.classList.add('trigger-enter');
+
+      setTimeout(() => {
+        /* should not use function, only arrow, because can not find this*/
+        if (this.classList.contains('trigger-enter')){
+          this.classList.add('trigger-enter-active');
+        }
+      }, 150)
+      background.classList.add('open');
+
+      const dropdown = this.querySelector('.dropdown');
+      //console.log(dropdown);
+      const dropdownCoords = dropdown
+    .getBoundingClientRect(); //important! this bound dropdown strictly to event and nothing can break the vision 
+      // console.log(dropdownCoords);
+      const navCoords = nav.getBoundingClientRect();
+      //console.log(navCoords);
+
+      const coords = {
+        height: dropdownCoords.height,
+        width: dropdownCoords.width,
+        top: dropdownCoords.top - navCoords.top, // important, in other case this is crushing
+        left: dropdownCoords.left - navCoords.left
+      };
+      //console.log(coords);
+
+      // Set backgrounds of dropdown menues:
+      background.style.setProperty('width', `${coords.width}px`);
+      background.style.setProperty('height', `${coords.height}px`);
+      background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`);
+    }
+
+    function handleLeave() {
+      //console.log("leave????????");
+
+      this.classList.remove('trigger-enter', 'trigger-enter-active'); /* this is instant, not animated*/
+
+      background.classList.remove('open');
+    }
+
+    triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+    triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+  </script>
 
 </body>
+
 </html>
