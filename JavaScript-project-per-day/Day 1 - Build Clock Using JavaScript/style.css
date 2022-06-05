@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+:root {
+    --primary: #AA71FF;
+    --primary-hover: #8C3EFF;
+    --primary-clicked: #C8A4FF;
+    --secondary: #FCA7E4;
+    --secondary-hover: #FA65D0;
+    --secondary-clicked: #FEE9F8;
+    --green: #62D26F;
+    --yellow: #FFDD2B;
+    --orange: #FD612C;
+    --blue: #7A71F6;
+    --red: #E8384F;
+    --text-dark-primary: #151918;
+    --text-dark-secondary: #2c3432;
+    --text-light-primary: #fcfcfc;
+    --text-light-secondary: #d7dddc;
+    --grey-primary: #8d9f9b;
+    --grey-light: #a9b6b3;
+    --grey-dark: #4b5956;
+
+}
+
+.heading{
+    position: relative;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-size: 56px;
+}
+
+.clock{
+    width: 450px;
+    height: 450px;
+    background-image: url(clock.svg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: var(--grey-dark);
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+}
+
+.clock .hour,
+.hr{
+width: 160px;
+height: 160px;
+
+}
+
+.clock .min,
+.mn{
+width: 210px;
+height: 210px;
+
+}
+
+.clock .sec,
+.sc{
+width: 260px;
+height: 260px;
+
+}
+
+.hr,
+.mn,
+.sc{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 80px;
+    background: var(--grey-dark);
+    border-radius: 6px 6px 0 0;
+    z-index: 10;
+}
+
+.mn::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: var(--grey-light);
+    border-radius: 6px 6px 0 0;
+    z-index: 12;
+}
+
+.sc::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 120px;
+    background: var(--orange);
+    border-radius: 6px 6px 0 0;
+    z-index: 14;
+}
+
+/* AI hours-30 C, sec-6C*/
+
+
+
+
+
+
+
