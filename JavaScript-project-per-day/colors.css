@@ -1,0 +1,60 @@
+:root{
+    --primary:#AA71FF;
+    --primary-hover:#8C3EFF;
+    --primary-clicked:#C8A4FF;
+    --secondary:#FCA7E4;
+    --secondary-hover:#FA65D0;
+    --secondary-clicked:#FEE9F8;
+    --green:#62D26F;
+    --yellow:#FFDD2B;
+    --orange:#FD612C;
+    --blue:#7A71F6;
+    --red:#E8384F;
+    --text-dark-primary:#151918;
+    --text-dark-secondary:#2c3432;
+    --text-light-primary:#fcfcfc;
+    --text-light-secondary:#d7dddc;
+    --grey-primary:#8d9f9b;
+    --grey-light:#a9b6b3;
+    --grey-dark:#4b5956;
+    --bg-dark-primary:#05000b;
+    --bg-dark-secondary:#19003e;
+    --bg-light-primary:#fbf9ff;
+    --bg-light-secondary:#f1e8ff;
+}
+
+/*
+html font:
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+css font:
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+font-family: 'Roboto', sans-serif;
+
+
+
+
+/* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+*/
+
+/* GRADIENTS 
+
+primary:
+background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(253,97,44,1) 100%);
+background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(122,113,246,1) 100%);
+
+background: linear-gradient(54deg, rgba(250,101,208,1) 0%, rgba(253,97,44,1) 100%);
+
+background: radial-gradient(circle, rgba(170,113,255,1) 0%, rgba(252,167,228,1) 100%);
+
+background: radial-gradient(circle, rgba(252,167,228,1) 0%, rgba(122,113,246,1) 100%);
+
+*/

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-dark-primary);
+    min-height: 100vh;
+}
+
+:root {
+    --primary: #AA71FF;
+    --primary-hover: #8C3EFF;
+    --primary-clicked: #C8A4FF;
+    --secondary: #FCA7E4;
+    --secondary-hover: #FA65D0;
+    --secondary-clicked: #FEE9F8;
+    --green: #62D26F;
+    --yellow: #FFDD2B;
+    --orange: #FD612C;
+    --blue: #7A71F6;
+    --red: #E8384F;
+    --text-dark-primary: #151918;
+    --text-dark-secondary: #2c3432;
+    --text-light-primary: #fcfcfc;
+    --text-light-secondary: #d7dddc;
+    --grey-primary: #8d9f9b;
+    --grey-light: #a9b6b3;
+    --grey-dark: #4b5956;
+    --bg-dark-primary:#05000b;
+    --bg-dark-secondary:#19003e;
+    --bg-light-primary:#fbf9ff;
+    --bg-light-secondary:#f1e8ff;
+}
+
+/* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+*/
+
+/* GRADIENTS 
+
+primary:
+background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(253,97,44,1) 100%);
+background: linear-gradient(54deg, rgba(170,113,255,1) 0%, rgba(122,113,246,1) 100%);
+
+background: linear-gradient(54deg, rgba(250,101,208,1) 0%, rgba(253,97,44,1) 100%);
+
+background: radial-gradient(circle, rgba(170,113,255,1) 0%, rgba(252,167,228,1) 100%);
+
+background: radial-gradient(circle, rgba(252,167,228,1) 0%, rgba(122,113,246,1) 100%);
+
+*/
+
+.heading{
+    padding-top: 35px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-light-primary);
+}
+
+.btn{
+    margin: 20px auto;
+    padding: 15px 60px;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--text-light-primary);
+    color: var(--text-dark-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--primary-hover);
+    color: var(--bg-light-primary);   
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 33.3%;
+    height: 150px;
+    background: #fff;
+    border: 2px solid var(--bg-dark-primary);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}

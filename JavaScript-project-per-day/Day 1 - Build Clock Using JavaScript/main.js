@@ -2,7 +2,15 @@ function clockInit(){
     var date = new Date();
     var time = [date.getHours(), date.getMinutes(), date.getSeconds()];
     var clockDivs = [document.getElementById("hr"), document.getElementById("mn"), document.getElementById("sc")];
-    
+   /* 
+    console.log(time);
+    console.log(time[1]);
+    console.log(time[1]/2);
+    console.log(time[0]);
+    console.log(time[0]*30);
+    console.log(hour);
+    https://dev.to/code_mystery/simple-analog-clock-using-html-css-javascript-2c6a
+*/
     var hour = time[1]/2+time[0]*30;
     
     clockDivs[0].style.transform="rotate("+ hour +"deg)";
